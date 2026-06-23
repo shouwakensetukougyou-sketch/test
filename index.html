@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- MindAR -->
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.4/dist/mindar-image.prod.js"></script>
-
-  <!-- A-Frame -->
   <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
 </head>
 
 <body>
-  <a-scene mindar-image="imageTargetSrc: targets.mind;" embedded>
-    
+  <a-scene 
+    mindar-image="imageTargetSrc: targets.mind;" 
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: true"
+  >
+
     <a-assets>
       <a-asset-item id="model" src="test.glb"></a-asset-item>
     </a-assets>
@@ -27,3 +28,4 @@
   </a-scene>
 </body>
 </html>
+``
