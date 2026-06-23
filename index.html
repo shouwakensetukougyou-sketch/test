@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  https://cdn.jsdelivr.net/npm/mind-ar/dist/mindar-image.prod.js>
+  https://aframe.io/releases/1.4.0/aframe.min.js
+</head>
+
+<body>
+  <a-scene mindar-image="imageTargetSrc: targets.mind;" embedded>
+    
+    <a-assets>
+      model.glb</a-asset-item>
+    </a-assets>
+
+    <a-camera position="0 0 0"></a-camera>
+
+    <a-entity mindar-image-target="targetIndex: 0">
+      #model</a-gltf-model>
+    </a-entity>
+
+  </a-scene>
+</body>
+</html>
