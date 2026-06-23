@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  https://cdn.jsdelivr.net/npm/mind-ar/dist/mindar-image.prod.js>
-  https://aframe.io/releases/1.4.0/aframe.min.js
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- MindAR -->
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.4/dist/mindar-image.prod.js"></script>
+
+  <!-- A-Frame -->
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
 </head>
 
 <body>
   <a-scene mindar-image="imageTargetSrc: targets.mind;" embedded>
     
     <a-assets>
-      model.glb</a-asset-item>
+      <a-asset-item id="model" src="test.glb"></a-asset-item>
     </a-assets>
 
     <a-camera position="0 0 0"></a-camera>
 
     <a-entity mindar-image-target="targetIndex: 0">
-      #model</a-gltf-model>
+      <a-gltf-model src="#model" scale="0.5 0.5 0.5"></a-gltf-model>
     </a-entity>
 
   </a-scene>
